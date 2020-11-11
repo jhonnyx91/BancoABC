@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -27,9 +28,9 @@ public class Tarjeta implements Serializable {
     private String fecha;
 
     @Column(name = "codigo")
-    private long codigo;
+    private Long codigo;
 
+    @JoinColumn(name = "PERSONA", referencedColumnName = "ID")
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "persona", referencedColumnName = "id")
     private Persona persona;
 }

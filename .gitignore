@@ -1,3 +1,15 @@
-.idea/*
-compiler.xml
+# Don't check auto-generated stuff into git
+coverage
+build
+build/**/*.class
+out
+node_modules
+stats.json
+**/.class
+
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
 .gradle

@@ -1,12 +1,12 @@
 package com.bancoabc.tarjeta.services;
 
 
-import com.bancoabc.tarjeta.dto.PersonasDto;
+import com.bancoabc.tarjeta.dto.PersonaDto;
 
 import java.util.List;
 
 public interface IPersonasService {
 
-    public List<PersonasDto> getPersonas();
+    public List<PersonaDto> getPersonas();
 
 }

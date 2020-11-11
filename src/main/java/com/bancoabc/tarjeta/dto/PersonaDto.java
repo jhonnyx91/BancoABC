@@ -5,15 +5,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 
-public class PersonasDto {
+public class PersonaDto {
     private Long id;
     private String nombre;
     private String apellido;
     private String correo;
-    private TarjetasDto tarjetas;
+    private List<TarjetaDto> tarjetas;
 }

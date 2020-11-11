@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -16,7 +17,7 @@ import java.io.Serializable;
 @Table(name = "Personas")
 public class Persona implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
@@ -29,7 +30,7 @@ public class Persona implements Serializable {
     @Column(name = "correo")
     private String correo;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "tc", referencedColumnName = "id")
-    private Tarjeta tarjeta;
+    public Persona(Long id) {
+        this.id = id;
+    }
 }

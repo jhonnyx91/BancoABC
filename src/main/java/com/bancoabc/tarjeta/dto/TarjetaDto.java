@@ -10,10 +10,11 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class TarjetasDto {
+public class TarjetaDto {
     private Long id;
     private String nombre;
     private String fecha;
-    private long codigo;
+    private Long codigo;
+    private PersonaDto persona;
 
 }
