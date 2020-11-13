@@ -1,15 +1,17 @@
-
 --Personas
-insert into personas(id,nombre,apellido,correo) values (123,' Jhonny','Montoya','jhonnymontoya@mail.com' );
-insert into personas(id,nombre,apellido,correo) values (345,' Mauricio','Lopez','mauriciolopez@mail.com');
-insert into personas(id,nombre,apellido,correo) values (567,' Andres','Munera','andresmunera@mail.com');
-
+insert into personas(id,nombre,apellido,correo) values (1,'Jhonny','Montoya','jhonnymontoya@mail.com' );
+insert into personas(id,nombre,apellido,correo) values (2,'Mauricio','Lopez','mauriciolopez@mail.com');
+insert into personas(id,nombre,apellido,correo) values (3,'Andres','Munera','andresmunera@mail.com');
+insert into personas(id,nombre,apellido,correo) values (4,'Chris','Hincapie','chrishincapie@mail.com');
+insert into personas(id,nombre,apellido,correo) values (5,'Andres','Pamplona','andrespamplona@mail.com');
 
 
 --Tarjetas
-insert into tarjetas(id,nombre,fecha,codigo,persona) values(1565646,'Jhonny','20/2024',587,123);
-insert into tarjetas(id,nombre,fecha,codigo,persona) values(5165489,'Mauricio','18/2024',345,345);
-insert into tarjetas(id,nombre,fecha,codigo,persona) values(6145644,'Andres','16/2024',751,567);
-insert into tarjetas(nombre,fecha,codigo,persona) values('Jhonny','16/2024',751,123);
-
-
+insert into tarjetas(nombre,fecha,codigo,persona) values('Jhonny M','20/2024',587,1);
+insert into tarjetas(nombre,fecha,codigo,persona) values('Mauricio','18/2024',345,2);
+insert into tarjetas(nombre,fecha,codigo,persona) values('Andres','16/2024',751,3);
+insert into tarjetas(nombre,fecha,codigo,persona) values('Chris','16/2026',452,4);
+insert into tarjetas(nombre,fecha,codigo,persona) values('Jhonny V','16/2024',751,1);
+insert into tarjetas(nombre,fecha,codigo,persona) values('Jhonny A','16/2024',751,1);
+insert into tarjetas(nombre,fecha,codigo,persona) values('Mauro','16/2024',751,2);
+insert into tarjetas(nombre,fecha,codigo,persona) values('Fabro','16/2024',751,2);
