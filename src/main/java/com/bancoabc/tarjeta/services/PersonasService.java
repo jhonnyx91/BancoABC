@@ -5,11 +5,13 @@ import com.bancoabc.tarjeta.dto.TarjetaDto;
 import com.bancoabc.tarjeta.model.dao.IPersonasDao;
 import com.bancoabc.tarjeta.model.dao.ITarjetasDao;
 import com.bancoabc.tarjeta.model.entitys.Persona;
+import com.bancoabc.tarjeta.model.entitys.Tarjeta;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -39,5 +41,15 @@ public class PersonasService implements IPersonasService {
                                 }
                         ).collect(Collectors.toList())
                 )).collect(Collectors.toList());
+    }
+
+    @Override
+    public PersonaDto addPersona(PersonaDto p) {
+        Persona nuevaPersona = new Persona();
+        nuevaPersona.setNombre(p.getNombre());
+        nuevaPersona.setApellido(p.getApellido());
+        nuevaPersona.setCorreo(p.getCorreo());
+        personasDao.save(nuevaPersona);
+        return p;
     }
 }
