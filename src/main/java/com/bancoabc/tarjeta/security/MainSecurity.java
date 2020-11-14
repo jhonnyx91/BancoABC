@@ -68,9 +68,9 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-        http.csrf().ignoringAntMatchers("/h2-console/**");
 
 
+//        http.csrf().ignoringAntMatchers("/h2-console/**");
         http.headers().frameOptions().disable();
     }
 

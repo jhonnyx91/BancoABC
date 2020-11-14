@@ -5,7 +5,7 @@ insert into rol (rol_nombre)
 values ('ROLE_ASESOR');
 
 insert into usuario (nombre ,nombre_Usuario,email            ,password)
-            values  ('admin','admin'      ,'admin@email.com','admin');
+            values  ('admin','admin'      ,'admin@email.com','$2a$10$wG79eHSDFOJ/.bnBoCbvxer/Zy4W42BdBTAjGKLTf8CQD0eFGv0KS');
 
 insert into usuario_rol (usuario_id,rol_id)
             values (1,1);

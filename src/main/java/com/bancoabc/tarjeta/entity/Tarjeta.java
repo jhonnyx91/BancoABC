@@ -1,5 +1,6 @@
-package com.bancoabc.tarjeta.model.entitys;
+package com.bancoabc.tarjeta.entity;
 
+import com.bancoabc.tarjeta.entity.Persona;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,8 +15,8 @@ import java.io.Serializable;
 @Setter
 
 @Entity
-@Table(name = "Personas")
-public class Persona implements Serializable {
+@Table(name = "Tarjetas")
+public class Tarjeta implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -24,13 +25,13 @@ public class Persona implements Serializable {
     @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "apellido")
-    private String apellido;
+    @Column(name = "fecha")
+    private String fecha;
 
-    @Column(name = "correo")
-    private String correo;
+    @Column(name = "codigo")
+    private Long codigo;
 
-    public Persona(Long id) {
-        this.id = id;
-    }
+    @JoinColumn(name = "PERSONA", referencedColumnName = "ID")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Persona persona;
 }

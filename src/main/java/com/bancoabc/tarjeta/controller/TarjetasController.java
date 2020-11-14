@@ -2,7 +2,7 @@ package com.bancoabc.tarjeta.controller;
 
 
 import com.bancoabc.tarjeta.dto.TarjetaDto;
-import com.bancoabc.tarjeta.model.dao.ITarjetasDao;
+import com.bancoabc.tarjeta.repository.TarjetaRepository;
 import com.bancoabc.tarjeta.services.ITarjetasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ public class TarjetasController {
     private ITarjetasService TarjetasService;
 
     @Autowired
-    private ITarjetasDao itarjetasDao;
+    private TarjetaRepository itarjetasDao;
 
     @GetMapping(value = "/tarjeta")
     public List<TarjetaDto> getTarjetas() {

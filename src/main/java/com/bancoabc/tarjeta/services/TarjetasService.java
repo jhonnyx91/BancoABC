@@ -2,9 +2,7 @@ package com.bancoabc.tarjeta.services;
 
 import com.bancoabc.tarjeta.dto.PersonaDto;
 import com.bancoabc.tarjeta.dto.TarjetaDto;
-import com.bancoabc.tarjeta.model.dao.ITarjetasDao;
-import com.bancoabc.tarjeta.model.entitys.Persona;
-import com.bancoabc.tarjeta.model.entitys.Tarjeta;
+import com.bancoabc.tarjeta.repository.TarjetaRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +14,7 @@ import java.util.stream.Collectors;
 public class TarjetasService implements ITarjetasService {
 
     @Autowired
-    private ITarjetasDao TarjetasDao;
+    private TarjetaRepository TarjetasDao;
 
     @Override
     public List<TarjetaDto> getTarjetas() {
